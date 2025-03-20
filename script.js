@@ -1,12 +1,15 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Smooth scroll for navigation
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  // Smooth scroll for navigation - only for section links
+  document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
+      const targetElement = document.querySelector(this.getAttribute('href'));
+      if (targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
     });
   });
 
