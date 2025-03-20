@@ -101,6 +101,63 @@ main {
   object-fit: cover;
 }
 
+/* About page styles */
+.about-page {
+  padding: 7rem 2rem 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-page h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.highlight {
+  color: #00ffea;
+}
+
+.about-content {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.about-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #A0AEC0;
+}
+
+.about-content .intro {
+  font-size: 1.1rem;
+}
+
+.values, .services {
+  margin-top: 2rem;
+}
+
+.values h2 {
+  color: #00B4D8;
+  margin-bottom: 1rem;
+}
+
+.values ul, .services ul {
+  list-style: none;
+  margin-left: 1rem;
+}
+
+.values li, .services li {
+  margin-bottom: 0.5rem;
+  color: #A0AEC0;
+}
+
+.values li strong {
+  color: #00ffea;
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
