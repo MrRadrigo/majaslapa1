@@ -305,6 +305,14 @@ main {
   color: #fff;
 }
 
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
 .contact-info {
   background: rgba(255, 255, 255, 0.05);
   padding: 2rem;
