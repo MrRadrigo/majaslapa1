@@ -236,6 +236,48 @@ main {
   transform: scale(1.05);
 }
 
+/* Contact page styles */
+.contact-page {
+  padding: 7rem 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-page h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+.contact-info {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.contact-item {
+  margin-bottom: 2rem;
+}
+
+.contact-item h2 {
+  color: #00B4D8;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.contact-item p {
+  color: #A0AEC0;
+  font-size: 1.2rem;
+}
+
+.map-container {
+  margin-top: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
