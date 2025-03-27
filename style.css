@@ -63,8 +63,10 @@ main {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto;
   gap: 2rem;
+  margin: 2rem;
 }
 
 .card {
@@ -74,6 +76,31 @@ main {
   backdrop-filter: blur(10px);
   transition: transform 0.3s;
   border: 2px solid black;
+}
+
+.card:nth-child(1) {
+  grid-column: 1 / 6;
+  grid-row: 1;
+}
+
+.card:nth-child(2) {
+  grid-column: 6 / 13;
+  grid-row: 1;
+}
+
+.card:nth-child(3) {
+  grid-column: 1 / 7;
+  grid-row: 2;
+}
+
+.card:nth-child(4) {
+  grid-column: 7 / 13;
+  grid-row: 2;
+}
+
+.card:nth-child(5) {
+  grid-column: 1 / 6;
+  grid-row: 3;
 }
 
 .card:hover {
