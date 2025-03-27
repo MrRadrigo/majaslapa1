@@ -63,7 +63,7 @@ main {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin: 2rem;
 }
@@ -86,16 +86,13 @@ main {
 .card:nth-child(2) {
   grid-column: 2;
   grid-row: 1;
-  width: 48%;
-  float: left;
-  margin-right: 2%;
+  height: 200px;
 }
 
 .card:nth-child(3) {
-  grid-column: 2;
+  grid-column: 3;
   grid-row: 1;
-  width: 48%;
-  float: right;
+  height: 200px;
 }
 
 .service-image {
