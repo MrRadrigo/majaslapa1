@@ -242,16 +242,18 @@ main {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 1200px;
 }
 
 .gallery-image {
   position: relative;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
-  aspect-ratio: 1;
+  height: 250px;
 }
 
 .gallery-image img {
@@ -259,6 +261,11 @@ main {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+}
+
+.gallery-image:nth-child(9),
+.gallery-image:nth-child(10) {
+  grid-column: 2 span;
 }
 
 .gallery-image:hover img {
