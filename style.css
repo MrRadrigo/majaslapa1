@@ -263,7 +263,10 @@ main {
 
 .gallery-image:nth-child(9),
 .gallery-image:nth-child(10) {
-  grid-column: 2 span;
+  grid-column: span 2;
+  height: 300px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .gallery-image:hover img {
