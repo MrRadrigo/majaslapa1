@@ -86,19 +86,20 @@ main {
 .card:nth-child(2),
 .card:nth-child(3) {
   grid-column: 2;
-  width: 45%;
-  min-height: 500px;
+  width: 40%;
+  min-height: 600px;
   margin: 0;
   display: inline-block;
   vertical-align: top;
+  background: rgba(13, 17, 23, 0.8);
 }
 
 .card:nth-child(2) {
-  margin-right: 5%;
+  margin-right: 10px;
 }
 
 .card:nth-child(3) {
-  margin-left: 5%;
+  margin-left: 10px;
 }
 
 .service-image {
