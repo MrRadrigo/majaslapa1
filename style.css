@@ -87,17 +87,18 @@ main {
 .card:nth-child(3) {
   grid-column: 2;
   width: 45%;
-  min-height: 400px;
+  min-height: 500px;
   margin: 0;
   display: inline-block;
+  vertical-align: top;
 }
 
 .card:nth-child(2) {
-  float: left;
+  margin-right: 5%;
 }
 
 .card:nth-child(3) {
-  float: right;
+  margin-left: 5%;
 }
 
 .service-image {
