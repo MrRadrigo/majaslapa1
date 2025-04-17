@@ -37,7 +37,34 @@ function validateForm(event) {
   return false;
 }
 
+// Image zoom functionality
+function setupGalleryZoom() {
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImage');
+  const closeBtn = document.querySelector('.close-modal');
+
+  // Add click handlers to all gallery images
+  document.querySelectorAll('.gallery-image img').forEach(img => {
+    img.onclick = function() {
+      modal.classList.add('active');
+      modalImg.src = this.src;
+    }
+  });
+
+  // Close modal when clicking the close button or outside the image
+  closeBtn.onclick = function() {
+    modal.classList.remove('active');
+  }
+
+  modal.onclick = function(e) {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  setupGalleryZoom();
   // Smooth scroll for navigation - only for section links
   document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
