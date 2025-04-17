@@ -318,7 +318,7 @@ main {
 
 /* Complaints form styles */
 .complaints-page {
-  padding: 2rem;
+  padding: 8rem 2rem 2rem;
   max-width: 800px;
   margin: 0 auto;
 }
