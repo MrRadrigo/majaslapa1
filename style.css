@@ -207,11 +207,10 @@ main {
 .process-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: auto auto auto;
   gap: 1rem;
-  margin-top: 2rem;
-  max-width: 1200px;
   margin: 2rem auto;
+  max-width: 1200px;
 }
 
 .process-image {
@@ -221,9 +220,9 @@ main {
   aspect-ratio: 4/3;
 }
 
-.process-image:nth-child(9),
-.process-image:nth-child(10) {
+.process-image:nth-child(n+9) {
   grid-column: span 2;
+  aspect-ratio: 16/9;
 }
 
 .process-image img {
