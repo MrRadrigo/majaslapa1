@@ -86,7 +86,7 @@ main {
 .card:nth-child(2),
 .card:nth-child(3) {
   grid-column: 2;
-  width: 45%;
+  width: 85%;
   min-height: 500px;
   margin: 0;
   display: inline-block;
@@ -245,7 +245,7 @@ main {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 2fr);
   grid-template-rows: repeat(3, auto);
   gap: 1rem;
   margin: 2rem auto;
