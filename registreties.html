@@ -29,22 +29,29 @@
     <h1>Reģistrācijas <span class="highlight">forma</span></h1>
     
     <div class="complaints-form">
-      <form>
+      <form id="registrationForm" onsubmit="return validateForm(event)">
         <div class="form-group">
           <label>Lietotāja vārds</label>
-          <input type="text" placeholder="Ievadiet e-pastu" required>
+          <input type="text" id="username" placeholder="Ievadiet lietotāja vārdu" required>
+        </div>
+
+        <div class="form-group">
+          <label>E-pasts</label>
+          <input type="email" id="email" placeholder="Ievadiet e-pastu" required>
         </div>
 
         <div class="form-group">
           <label>Parole</label>
-          <input type="password" placeholder="Ievadiet paroli" required>
+          <input type="password" id="password" placeholder="Ievadiet paroli" required>
         </div>
 
         <div class="form-group">
           <label>Atkārtot paroli</label>
-          <input type="password" placeholder="Atkārtoti ievadiet paroli" required>
+          <input type="password" id="confirmPassword" placeholder="Atkārtoti ievadiet paroli" required>
         </div>
 
+        <div id="message" style="color: #00ffea; margin: 10px 0; display: none;"></div>
+        
         <button type="submit" class="submit-btn">REĢISTRĒTIES</button>
       </form>
     </div>

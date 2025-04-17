@@ -1,4 +1,42 @@
 
+// Admin credentials
+const adminUser = {
+  username: 'admin',
+  password: 'admin123',
+  isAdmin: true
+};
+
+function validateForm(event) {
+  event.preventDefault();
+  
+  const username = document.getElementById('username').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const confirmPassword = document.getElementById('confirmPassword').value;
+  const messageDiv = document.getElementById('message');
+
+  if (password !== confirmPassword) {
+    messageDiv.style.display = 'block';
+    messageDiv.style.color = 'red';
+    messageDiv.textContent = 'Paroles nesakrīt!';
+    return false;
+  }
+
+  // Check if admin
+  if (username === adminUser.username && password === adminUser.password) {
+    messageDiv.style.display = 'block';
+    messageDiv.style.color = '#00ffea';
+    messageDiv.textContent = 'Administratora pieslēgšanās veiksmīga!';
+    return false;
+  }
+
+  // Regular user registration
+  messageDiv.style.display = 'block';
+  messageDiv.style.color = '#00ffea';
+  messageDiv.textContent = 'Tu esi veiksmīgi pereģistrējies!';
+  return false;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // Smooth scroll for navigation - only for section links
   document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
