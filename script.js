@@ -33,7 +33,7 @@ function validateForm(event) {
   // Regular user registration
   messageDiv.style.display = 'block';
   messageDiv.style.color = '#00ffea';
-  messageDiv.textContent = 'Tu esi veiksmīgi pereģistrējies!';
+  messageDiv.textContent = 'Tu esi veiksmīgi piereģistrējies!';
   return false;
 }
 
