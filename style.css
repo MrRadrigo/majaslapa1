@@ -252,8 +252,8 @@ main {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 2fr);
-  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto auto;
   gap: 1rem;
   margin: 2rem auto;
   max-width: 1200px;
@@ -261,9 +261,9 @@ main {
 
 .gallery-image {
   position: relative;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  height: 250px;
+  aspect-ratio: 4/3;
 }
 
 .gallery-image img {
@@ -273,12 +273,9 @@ main {
   transition: transform 0.3s ease;
 }
 
-.gallery-image:nth-child(9),
-.gallery-image:nth-child(10) {
+.gallery-image:nth-child(n+9) {
   grid-column: span 2;
-  height: 300px;
-  margin: 0 auto;
-  width: 100%;
+  aspect-ratio: 16/9;
 }
 
 .gallery-image:hover img {
