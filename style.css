@@ -207,15 +207,23 @@ main {
 .process-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
   gap: 1rem;
   margin-top: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
 }
 
 .process-image {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  aspect-ratio: 1;
+  aspect-ratio: 4/3;
+}
+
+.process-image:nth-child(9),
+.process-image:nth-child(10) {
+  grid-column: span 2;
 }
 
 .process-image img {
